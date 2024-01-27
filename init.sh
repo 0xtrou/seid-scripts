@@ -6,13 +6,6 @@ if [ -z "$chain_id" ]; then
   exit 1
 fi
 
-moniker=$2
-if [ -z "$moniker" ]; then
-  echo "moniker is required"
-  exit 1
-fi
-
 echo $chain_id
-echo $moniker
 
-seid init --chain-id $chain_id --tracing  --log_level trace
+seid init seitrace --chain-id $chain_id -o
