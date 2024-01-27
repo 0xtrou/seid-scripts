@@ -12,4 +12,7 @@ if [ -z "$moniker" ]; then
   exit 1
 fi
 
-seid start --moniker $moniker --chain-id $chain_id --tracing  --log_level trace
+echo $chain_id
+echo $moniker
+
+seid init --chain-id $chain_id --tracing  --log_level trace

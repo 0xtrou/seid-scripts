@@ -14,11 +14,11 @@ seid version
 ## Quick start an rpc node
 
 ```bash
-bash seid-scripts/prepare.sh
+bash seid-scripts/prepare.sh <chain-id> <moniker> <cosmos-rpc-url>
 ```
 
 ## Running 
 
 ```bash
-bash seid-scripts/start.sh
+bash seid-scripts/start.sh <chain-id> <moniker>
 ```
