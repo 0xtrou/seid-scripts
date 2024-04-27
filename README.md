@@ -11,6 +11,11 @@ seid version
 ```
 3. Download corresponding `genesis.json` into `~/backups` for the network you want to run, might take a look at https://github.com/sei-protocol/testnet
 
+## Init seid first
+```
+seid init --chain-id <chain-id> <moniker>
+```
+
 ## Quick start an rpc node
 
 ```bash
