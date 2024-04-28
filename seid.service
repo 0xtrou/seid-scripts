@@ -1,0 +1,23 @@
+[Unit]
+Description=Sei Node
+After=network.target
+
+[Service]
+User=ubuntu
+Type=simple
+#ExecStart="/home/ubuntu/.gvm/pkgsets/go1.21/global/bin/seid start --moniker seitrace --chain-id arctic-1 2>&1 | tee -a \"/home/ubuntu/$(date +'%d-%m-%Y').log\""
+#ExecStart=/bin/bash -c "/home/ubuntu/.gvm/pkgsets/go1.21/global/bin/seid start --moniker seitrace --chain-id arctic-1 2>&1 | tee -a \"/home/ubuntu/$(date +'%d-%m-%Y').log\""
+ExecStart=/bin/bash -c "/home/ubuntu/.gvm/pkgsets/go1.21/global/bin/seid start --moniker seitrace --chain-id arctic-1 2>&1 | tee -a \"/home/ubuntu/$(date +%%d-%%m-%%Y).log\""
+
+Restart=always
+# wait 30 seconds before restarting the service after it has failed.
+RestartSec=30
+#  wait up to 30 seconds for the service to stop gracefully when it is being stopped.
+TimeoutStopSec=30
+# send the SIGINT signal (equivalent to pressing Ctrl-C) to the service process when it is being stopped
+# giving it a chance to shut down gracefully.
+KillSignal=SIGINT
+LimitNOFILE=65535
+
+[Install]
+WantedBy=multi-user.target
