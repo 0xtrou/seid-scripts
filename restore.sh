@@ -4,3 +4,5 @@
 cp ~/backups/priv_validator_state.json ~/.sei/data/priv_validator_state.json
 cp ~/backups/priv_validator_key.json ~/.sei/config/priv_validator_key.json
 cp ~/backups/genesis.json ~/.sei/config/genesis.json
+cp ~/backups/config.toml ~/.sei/config/config.toml
+cp ~/backups/app.toml ~/.sei/config/app.toml
